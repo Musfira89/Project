@@ -1,0 +1,8 @@
+
+.background {
+    background-image: url(../../assets/background.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 50rem; /* Set the desired height */
+    width: 100%; /* Set the width to 100% for full width */
+  }

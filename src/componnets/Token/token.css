@@ -1,0 +1,9 @@
+.token-bg {
+    background-image: url(../../assets/TokenBg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 45rem; /* Set the desired height */
+    width: 100%; /* Set the width to 100% for full width */
+  }
+
+  

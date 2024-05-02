@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'Komtitta'; /* Mixed case font name */
+  src: url('../fonts/KOMTITA.TTF') format('truetype'); /* Adjust the path as needed */
+}
+
+.paragraph {
+  font-family: 'Komtitta', sans-serif; /* Use the mixed case font name */
+  line-height:2;
+}
+.heading {
+  font-family: 'Komtitta', sans-serif; /* Use the mixed case font name */
+  font-size: 4rem;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.Navbar {
+  font-family: 'Komtitta', sans-serif;
+}
+
+.origin-wrapper {
+  background-color: black;
+  position: relative; /* Change position to relative */
+  bottom: 1rem; /* Adjust the top position as needed */
+  z-index: 2; /* Origin is overlaying Slider and Token */
+}

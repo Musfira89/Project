@@ -1,0 +1,27 @@
+/* Header.css */
+.header-bg {
+    background-image: url(../../assets/Header.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 40rem; /* Set the desired height */
+    width: 100%; /* Set the width to 100% for full width */
+  }
+
+@keyframes doubleBounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.double-bounce-in {
+  animation: doubleBounceIn 1s cubic-bezier(0.68, -0.55, 0.265, 1.55) forwards;
+}
+
