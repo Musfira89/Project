@@ -14,7 +14,7 @@ const Slider = () => {
 
     <div className="relative">
       <div className="slider-bg"></div>
-      <h1 className="heading absolute top-16 text-white">COLLECTABLES</h1>
+      <h1 className={`heading absolute top-16 text-white ${isIntersecting ? 'animate-bounce-in' : ''}`}>COLLECTABLES</h1>
       {/* Carousel */}
       <div className="flex items-center justify-center space-x-8 absolute bottom-[10%] left-0 right-0">
         <div className={`w-[25%] slider-card ${isIntersecting ? 'animate-bounce-in' : ''}`}>

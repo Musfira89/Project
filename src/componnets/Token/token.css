@@ -6,4 +6,27 @@
     width: 100%; /* Set the width to 100% for full width */
   }
 
+  @keyframes bounceInTokenHeading {
+    0% {
+      transform: translate(-50%, -50%) translateY(-50px) scale(0.8); /* Move the element up and scale down slightly while keeping it centered */
+      opacity: 0;
+    }
+    25% {
+      transform: translate(-50%, -50%) translateY(-30px) scale(1.1); /* Bounce the element up and scale up while keeping it centered */
+    }
+    50% {
+      transform: translate(-50%, -50%) translateY(0) scale(0.9); /* Bounce the element down slightly and scale down while keeping it centered */
+    }
+    75% {
+      transform: translate(-50%, -50%) translateY(-15px) scale(1.05); /* Bounce the element up slightly and scale up while keeping it centered */
+    }
+    100% {
+      transform: translate(-50%, -50%) translateY(0) scale(1); /* Bring the element back to its original position and size while keeping it centered */
+      opacity: 1;
+    }
+  }
+  
+  .token-heading.animate-bounce-in {
+    animation: bounceInTokenHeading 1s ease-out;
+  }
   

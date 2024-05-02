@@ -7,4 +7,27 @@
     height: 50rem; /* Set the desired height */
     width: 100%; /* Set the width to 100% for full width */
   }
+  .animate-bounce-in {
+    animation: bounceIn 1s ease-out;
+  }
+  
+  @keyframes bounceIn {
+    0% {
+      transform: translateY(-50px) scale(0.8); /* Move the image up and scale down slightly */
+      opacity: 0;
+    }
+    25% {
+      transform: translateY(-30px) scale(1.1); /* Bounce the image up and scale up */
+    }
+    50% {
+      transform: translateY(0) scale(0.9); /* Bounce the image down slightly and scale down */
+    }
+    75% {
+      transform: translateY(-15px) scale(1.05); /* Bounce the image up slightly and scale up */
+    }
+    100% {
+      transform: translateY(0) scale(1); /* Bring the image back to its original position and size */
+      opacity: 1;
+    }
+  }
   
