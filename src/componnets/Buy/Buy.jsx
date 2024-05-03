@@ -71,7 +71,7 @@ const Buy = () => {
           isCatVisible ? "animate-bounce-in" : ""
         }`}
       />
-       <button className="paragraph absolute top-[28%] left-[14%] w-[15%] bg-red-700 text-white p-3 flex items-center justify-center ">
+       <button className="paragraph absolute top-[31%] left-[14%] w-[15%] bg-red-700 text-white p-3 flex items-center justify-center ">
         <img src={icon} alt="Link icon" className="mr-2 w-[14%]" />{" "}
         {/* Use the custom icon image */}
         Buy on Jupiter
@@ -79,14 +79,14 @@ const Buy = () => {
       <img
         src={power}
         alt="Cloud"
-        className="absolute top-[25%] w-[95%] centered-image"
+        className="absolute top-[28%] w-[95%] centered-image"
       />
       <img
         src={powerText}
         alt="Heading text"
-        className={"absolute top-[34%] centered-image w-[40%]"}
+        className={"absolute top-[37%] centered-image w-[40%]"}
       />
-      <p className="paragraph absolute top-[43%] centered-image w-[55%] text-white text-lowercase ">
+      <p className="paragraph absolute top-[45%] centered-image w-[55%] text-white text-lowercase ">
         BRUH has a 2.5% transfer fee on all on-chain transfers. <br />
         <br />
         This fee will be used in 3 ways: <br />
@@ -99,9 +99,9 @@ const Buy = () => {
       <img
         src={communityText}
         alt="Heading text"
-        className={"absolute top-[58%] centered-image w-[53%]"}
+        className={"absolute top-[60%] centered-image w-[53%]"}
       />
-  <p className="paragraph absolute top-[67%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 text-white text-lowercase text-center">
+  <p className="paragraph absolute top-[69%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 text-white text-lowercase text-center">
   The first 10 frens that our community will vote on and support are : <br />
   <br />
   Static: JUP, WEN, BOK, FLUXB, All <br />
