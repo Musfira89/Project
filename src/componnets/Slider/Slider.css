@@ -14,6 +14,7 @@
     /* Add animation properties for the heading */
     animation: doubleBounceIn 1s ease-in-out;
   }
+  
  /* Slider.css */
 
 @keyframes doubleBounceIn {

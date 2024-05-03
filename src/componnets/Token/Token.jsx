@@ -32,7 +32,7 @@ const Token = () => {
       <img
         src={TokenCloud}
         alt="Heading text"
-        className="absolute top-[16%] w-[68%] centered-image z-10" // Position TokenCloud at the top
+        className="absolute top-[16%] w-[72%] centered-image z-10" // Position TokenCloud at the top
       />
       <img
         src={TokenText}

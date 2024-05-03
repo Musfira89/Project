@@ -18,6 +18,7 @@ import "./buy.css";
 const Buy = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
   const [isCatVisible, setIsCatVisible] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,6 +29,11 @@ const Buy = () => {
 
       setIsTextVisible(textRect.top < window.innerHeight * 0.99);
       setIsCatVisible(catRect.top < window.innerHeight * 0.99);
+
+      // If user has scrolled and reached 99% of the page
+      if (window.scrollY + window.innerHeight >= document.body.scrollHeight * 0.99) {
+        setIsVisible(true); // Set isVisible to true
+      }
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -52,12 +58,11 @@ const Buy = () => {
           isTextVisible ? "animate-bounce-in" : ""
         }`}
       />
-      <p className="paragraph absolute top-[11%] left-[15%] w-[42%] text-white ">
+      <p className="paragraph absolute top-[11%] left-[15%] w-[41%] text-white ">
         With the opportunity for a first start the community has upgraded Lorem
         ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem
         similique, eaque voluptas tempore blanditiis quia autem asperiores,
         natus deleniti minima omnis nemo dolorum harum dolores neque dolore
-        ratione quibusdam! Lorem ipsum dolor
       </p>
       <img
         src={BuyCat}
@@ -66,7 +71,7 @@ const Buy = () => {
           isCatVisible ? "animate-bounce-in" : ""
         }`}
       />
-      <button className="paragraph absolute top-[32%] left-[14%] w-[15%] bg-red-700 text-white p-3 flex items-center justify-center ">
+       <button className="paragraph absolute top-[28%] left-[14%] w-[15%] bg-red-700 text-white p-3 flex items-center justify-center ">
         <img src={icon} alt="Link icon" className="mr-2 w-[14%]" />{" "}
         {/* Use the custom icon image */}
         Buy on Jupiter
@@ -74,14 +79,14 @@ const Buy = () => {
       <img
         src={power}
         alt="Cloud"
-        className="absolute top-[27%] w-[95%] centered-image"
+        className="absolute top-[25%] w-[95%] centered-image"
       />
       <img
         src={powerText}
         alt="Heading text"
-        className={"absolute top-[36%] centered-image w-[40%]"}
+        className={"absolute top-[34%] centered-image w-[40%]"}
       />
-      <p className="paragraph absolute top-[45%] centered-image w-[55%] text-white text-lowercase ">
+      <p className="paragraph absolute top-[43%] centered-image w-[55%] text-white text-lowercase ">
         BRUH has a 2.5% transfer fee on all on-chain transfers. <br />
         <br />
         This fee will be used in 3 ways: <br />
@@ -94,28 +99,34 @@ const Buy = () => {
       <img
         src={communityText}
         alt="Heading text"
-        className={"absolute top-[60%] centered-image w-[53%]"}
+        className={"absolute top-[58%] centered-image w-[53%]"}
       />
-      <p className="paragraph absolute top-[66%] centered-image w-[55%] text-white text-lowercase ">
-        BRUH has a 2.5% transfer fee on all on-chain transfers. <br />
-        <br />
-        This fee will be used in 3 ways: <br />
-        1% will be dedicated to burning $BRUH <br />
-      </p>
-      <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 top-[75%] centered-image w-[12%] ">
-        <img src={asset1} alt="Asset 1" className="mx-12" />
-        <img src={assest2} alt="Asset 2" className="mx-12" />
-        <img src={assest3} alt="Asset 3" className="mx-12" />
-        <img src={assest4} alt="Asset 4" className="mx-12" />
-        <img src={assest5} alt="Asset 5" className="mx-12" />
-      </div>
-      <div className="flex justify-center absolute top-[83%] centered-image w-[15%] transform -translate-x-1/2">
-        <img src={assest6} alt="Asset 6" className="mx-12" />
-        <img src={assest2} alt="Asset 2" className="mx-12" />
-        <img src={assest3} alt="Asset 3" className="mx-12" />
-        <img src={assest4} alt="Asset 4" className="mx-12" />
-        <img src={assest5} alt="Asset 5" className="mx-12" />
-      </div>
+  <p className="paragraph absolute top-[67%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 text-white text-lowercase text-center">
+  The first 10 frens that our community will vote on and support are : <br />
+  <br />
+  Static: JUP, WEN, BOK, FLUXB, All <br />
+  Voted on by the community: BERN, WIF, CHONKY, GUAZ, BRUH (double burn) <br />
+</p>
+
+  
+      {isVisible && (
+        <>
+          <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 top-[75%] centered-image w-[12%] ">
+            <img src={asset1} alt="Asset 1" className="mx-12 animate-bounce-in" />
+            <img src={assest2} alt="Asset 2" className="mx-12 animate-bounce-in" />
+            <img src={assest3} alt="Asset 3" className="mx-12 animate-bounce-in" />
+            <img src={assest4} alt="Asset 4" className="mx-12 animate-bounce-in" />
+            <img src={assest5} alt="Asset 5" className="mx-12 animate-bounce-in" />
+          </div>
+          <div className="flex justify-center absolute top-[83%] centered-image w-[15%] transform -translate-x-1/2">
+            <img src={assest6} alt="Asset 6" className="mx-12 animate-bounce-in" />
+            <img src={assest2} alt="Asset 2" className="mx-12 animate-bounce-in" />
+            <img src={assest3} alt="Asset 3" className="mx-12 animate-bounce-in" />
+            <img src={assest4} alt="Asset 4" className="mx-12 animate-bounce-in" />
+            <img src={assest5} alt="Asset 5" className="mx-12 animate-bounce-in" />
+          </div>
+        </>
+      )}
     </div>
   );
 };
