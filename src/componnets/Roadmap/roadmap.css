@@ -1,24 +1,16 @@
-.slider-bg {
-    background-image: url(../../assets/slider.png);
+
+.roadmapBg-img {
+    background-image: url(../../assets/background.jpg);
     background-size: cover;
     background-position: center;
-    height: 50rem; /* Set the desired height */
+    height: 76rem; /* Set the desired height */
     width: 100%; /* Set the width to 100% for full width */
   }
-  .centered-image {
-    left: 50%;
-    transform: translateX(-50%);
-  }
-  
-  .heading {
-    /* Add animation properties for the heading */
-    animation: doubleBounceIn 1s ease-in-out;
-  }
- /* Slider.css */
 
-@keyframes doubleBounceIn {
+/* Add animation keyframes for the roadmap cards */
+@keyframes roadmapCardBounceIn {
   0% {
-    opacity: 0;
+    opacity: 0; /* Initially hide the card */
     transform: translateY(-50px) scale(0.8); /* Move the card up and scale down slightly */
   }
   25% {
@@ -36,21 +28,22 @@
   }
 }
 
-.slider-card {
+/* Apply the animation to the roadmap cards */
+.roadmap-card {
   opacity: 0; /* Initially hide the card */
-  animation: doubleBounceIn 1s ease-in-out forwards; /* Apply the double-bounce-in animation */
+  animation: roadmapCardBounceIn 1s ease-in-out forwards; /* Apply the bounce-in animation */
   animation-fill-mode: both; /* Retain both the starting and ending keyframe styles */
 }
 
-.slider-card:nth-child(1) {
-  animation-delay: 0s; /* Delay for the first card */
+/* Add animation delays for each roadmap card */
+.roadmap-card:nth-child(1) {
+  animation-delay: 1s; /* Delay for the first card */
 }
 
-.slider-card:nth-child(2) {
-  animation-delay: 1s; /* Delay for the second card */
+.roadmap-card:nth-child(2) {
+  animation-delay: 2s; /* Delay for the second card */
 }
 
-.slider-card:nth-child(3) {
-  animation-delay: 2s; /* Delay for the third card */
+.roadmap-card:nth-child(3) {
+  animation-delay: 3s; /* Delay for the third card */
 }
-

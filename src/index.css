@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 @font-face {
-  font-family: 'Komtitta'; /* Mixed case font name */
-  src: url('../fonts/KOMTITA.TTF') format('truetype'); /* Adjust the path as needed */
+  font-family: 'Komtitta'; 
+  src: url('../fonts/KOMTITA.TTF') format('truetype'); 
 }
 
 .paragraph {
   font-family: 'Komtitta', sans-serif; /* Use the mixed case font name */
-  line-height:2;
+  line-height:1.6;
 }
 .heading {
   font-family: 'Komtitta', sans-serif; /* Use the mixed case font name */
