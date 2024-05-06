@@ -30,13 +30,13 @@ const Origin = () => {
           alt="Heading text"
           className={`absolute top-[20%] left-[3%] w-[20%] ${isVisible ? 'animate-bounce-in' : ''}`}
         />
-        <p className="paragraph absolute top-[38%] left-[13%] w-1/2">
-        With the opportunity for a first start the community has upgraded Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem
-        similique, eaque voluptas tempore blanditiis quia autem asperiores,
-        natus deleniti minima omnis nemo dolorum harum dolores neque dolore
-        ratione quibusdam! Lorem ipsum dolor natus deleniti minima omnis nemo dolorum harum dolores neque dolore
-        ratione quibusdam! Lorem ipsum dolor    
+        <p className="paragraph absolute top-[38%] left-[13%] w-1/2 font-bold">
+        With the opportunity for a first start the community has upgraded Bruh 
+        from a standard SSPL token to now have token extensions.In short Bruh has been given superpowers.
+        The peaky Bruh is on a mission to use these powers to not only support BRUH and its holders, 
+        but also support other tokens within the Selana ecosystme. <br></br>
+        As a token re-launched by the Selana community we will keep the memes alive but also live up to
+        the ticker $BRUH a fren on Selana.
         </p>
         <img
           src={OriginCat}

@@ -26,13 +26,16 @@ const Header = () => {
       {/* Header text image */}
       <img src={HeaderText} alt="Header text image" id="header-text" className="absolute top-16 right-44 w-2/6 h-auto " />
 
-      {/* 1st Bullet image */}
-      <img src={bullet} alt="Bullet image" className="absolute animate-bullet top-16 right-[41%]" />
-      <img src={bullet} alt="Bullet image" className="absolute animate-bullet top-36 right-[14%]" />
-      <img src={bullet} alt="Bullet image" className="absolute animate-bullet top-[42%] right-[38%]" />
-      <img src={bullet} alt="Bullet image" className="absolute animate-bullet top-[63%] right-[25%]" />
-
-
+      
+      <div className="absolute top-[78%] left-[57%] flex space-x-4">
+        <button className="bg-red-100 text-black p-2 py-3 flex items-center justify-center font-bold text-xl " style={{ fontFamily: "'Komtitta', sans-serif" }}>
+          BUY ON JUPITER
+        </button>
+        <button className="bg-red-100 text-black p-2 flex items-center justify-center font-bold text-xl" style={{ fontFamily: "'Komtitta', sans-serif" }}>
+          JOIN THE COMMUNITY
+        </button>
+      </div>
+    
 
     </header>
   );

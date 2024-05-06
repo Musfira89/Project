@@ -12,6 +12,10 @@ import assest3 from "../../assets/addional/c3.png";
 import assest4 from "../../assets/addional/c4.png";
 import assest5 from "../../assets/addional/c5.png";
 import assest6 from "../../assets/addional/c6.png";
+import assest7 from "../../assets/addional/c7.png";
+import assest8 from "../../assets/addional/c8.png";
+import assest9 from "../../assets/addional/c9.png";
+import assest10 from "../../assets/addional/c10.png";
 
 import "./buy.css";
 
@@ -55,28 +59,29 @@ const Buy = () => {
       <img
         src={BuyText}
         alt="Heading text"
-        className={`buy-text absolute top-[2%] left-[7%] w-[31%] ${
+        className={`buy-text absolute top-[2%] left-[8%] w-[31%] ${
           isTextVisible ? "animate-bounce-in" : ""
         }`}
       />
-      <p className="paragraph absolute top-[13%] left-[15%] w-[41%] text-white ">
-        With the opportunity for a first start the community has upgraded Lorem
-        ipsum dolor sit amet consectetur adipisicing elit. Mollitia dolorem
-        similique, eaque voluptas tempore blanditiis quia autem asperiores,
-        natus deleniti minima omnis nemo dolorum harum dolores neque dolore
+      <p className="paragraph absolute top-[12%] left-[16%] w-[41%] text-white ">
+        To buy $BRUH download phantom wallet, puchase $SOL from an exchange or bridge $SOL and card itn
+        to your Phantom wallet then buy $BRUH on either Jupiter or FluxBeam.
+        You will also be able to buy $BRUH on exchanges but you are early BRUH.
+        
       </p>
       <img
         src={BuyCat}
         alt="Cat"
-        className={`buy-cat absolute top-[2%] right-[9%] w-[23%] ${
+        className={`buy-cat absolute top-[3%] right-[9%] w-[23%] ${
           isCatVisible ? "animate-bounce-in" : ""
         }`}
       />
-       <button className="paragraph absolute top-[36%] left-[14%] w-[15%] bg-red-700 text-white p-3 flex items-center justify-center ">
-        <img src={icon} alt="Link icon" className="mr-2 w-[14%]" />{" "}
-        {/* Use the custom icon image */}
-        Buy on Jupiter
-      </button>
+      <button className="absolute top-[34%] left-[15%] w-[16%] bg-red-700 text-white p-3 flex items-center justify-center font-bold text-lg" style={{ fontFamily: "'Comic Sans MS', sans-serif" }}>
+  <img src={icon} alt="Link icon" className="mr-2 w-[14%]" />{" "}
+  {/* Use the custom icon image */}
+  BUY ON JUPITER
+</button>
+
       <img
         src={power}
         alt="Cloud"
@@ -85,9 +90,9 @@ const Buy = () => {
       <img
         src={powerText}
         alt="Heading text"
-        className={"absolute top-[43%] centered-image w-[40%]"}
+        className={"absolute top-[42%] centered-image w-[40%]"}
       />
-      <p className="paragraph absolute top-[54%] centered-image w-[55%] text-white text-lowercase ">
+      <p className="paragraph absolute top-[52%] centered-image w-[57%] text-white ">
         BRUH has a 2.5% transfer fee on all on-chain transfers. <br />
         <br />
         This fee will be used in 3 ways: <br />
@@ -100,9 +105,9 @@ const Buy = () => {
       <img
         src={communityText}
         alt="Heading text"
-        className={"absolute top-[68%] centered-image w-[53%]"}
+        className={"absolute top-[70%] centered-image w-[53%]"}
       />
-  <p className="paragraph absolute top-[78%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 text-white text-lowercase text-center">
+  <p className="paragraph absolute top-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 text-white text-lowercase text-center">
   The first 10 frens that our community will vote on and support are : <br />
   Static: JUP, WEN, BOK, FLUXB, All <br />
   Voted on by the community: BERN, WIF, CHONKY, GUAZ, BRUH (double burn) <br />
@@ -111,19 +116,19 @@ const Buy = () => {
   
       {isVisible && (
         <>
-          <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 top-[83%] centered-image w-[12%] ">
+          <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 top-[86%] centered-image w-[6%] ">
             <img src={asset1} alt="Asset 1" className="mx-12 animate-bounce-in" />
             <img src={assest2} alt="Asset 2" className="mx-12 animate-bounce-in" />
             <img src={assest3} alt="Asset 3" className="mx-12 animate-bounce-in" />
             <img src={assest4} alt="Asset 4" className="mx-12 animate-bounce-in" />
             <img src={assest5} alt="Asset 5" className="mx-12 animate-bounce-in" />
           </div>
-          <div className="flex justify-center absolute top-[90%] centered-image w-[15%] transform -translate-x-1/2">
+          <div className="flex justify-center absolute top-[92%] centered-image w-[6%]">
             <img src={assest6} alt="Asset 6" className="mx-12 animate-bounce-in" />
-            <img src={assest2} alt="Asset 2" className="mx-12 animate-bounce-in" />
-            <img src={assest3} alt="Asset 3" className="mx-12 animate-bounce-in" />
-            <img src={assest4} alt="Asset 4" className="mx-12 animate-bounce-in" />
-            <img src={assest5} alt="Asset 5" className="mx-12 animate-bounce-in" />
+            <img src={assest7} alt="Asset 2" className="mx-12 animate-bounce-in" />
+            <img src={assest8} alt="Asset 3" className="mx-12 animate-bounce-in" />
+            <img src={assest9} alt="Asset 4" className="mx-12 animate-bounce-in" />
+            <img src={assest10} alt="Asset 5" className="mx-12 animate-bounce-in" />
           </div>
         </>
       )}

@@ -11,7 +11,8 @@ const LastBanner = () => {
       </div>
         
         {/* Right paragraph */}
-        <p className="paragraph text-white text-sm mr-4">© 2024 The Peaky Bruh. All right reserved</p>
+        <p className=" text-white text-xm mr-6" style={{ fontFamily: "'Comic Sans MS', sans-serif" }}
+        >© 2024 The Peaky Bruh. All right reserved</p>
       </div>
     </div>
   );
