@@ -7,43 +7,34 @@
     width: 100%; /* Set the width to 100% for full width */
   }
 
-/* Add animation keyframes for the roadmap cards */
-@keyframes roadmapCardBounceIn {
-  0% {
-    opacity: 0; /* Initially hide the card */
-    transform: translateY(-50px) scale(0.8); /* Move the card up and scale down slightly */
-  }
-  25% {
-    transform: translateY(-30px) scale(1.1); /* Bounce the card up and scale up */
-  }
-  50% {
-    transform: translateY(0) scale(0.9); /* Bounce the card down slightly and scale down */
-  }
-  75% {
-    transform: translateY(-15px) scale(1.05); /* Bounce the card up slightly and scale up */
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0) scale(1); /* Bring the card back to its original position and size */
-  }
-}
 
-/* Apply the animation to the roadmap cards */
-.roadmap-card {
-  opacity: 0; /* Initially hide the card */
-  animation: roadmapCardBounceIn 1s ease-in-out forwards; /* Apply the bounce-in animation */
-  animation-fill-mode: both; /* Retain both the starting and ending keyframe styles */
-}
-
-/* Add animation delays for each roadmap card */
-.roadmap-card:nth-child(1) {
-  animation-delay: 1s; /* Delay for the first card */
-}
-
-.roadmap-card:nth-child(2) {
-  animation-delay: 2s; /* Delay for the second card */
-}
-
-.roadmap-card:nth-child(3) {
-  animation-delay: 3s; /* Delay for the third card */
-}
+  .roadmap-card {
+    position: relative;
+    transition: transform 1s ease;
+  }
+  
+  .roadmap-card.flip {
+    transform: rotateY(180deg); /* First flip, upside down */
+  }
+  
+  .roadmap-card.flip.flip-again {
+    transform: rotateY(360deg); /* Second flip, back to original orientation */
+  }
+  
+  .roadmap-card .front-face,
+  .roadmap-card .back-face {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden; /* Hide the back face initially */
+  }
+  
+  .roadmap-card .front-face {
+    z-index: 1; /* Ensure front face is above back face */
+  }
+  
+  .roadmap-card .back-face {
+    transform: rotateY(180deg); /* Rotate the back face */
+    z-index: 1; /* Ensure back face is behind front face */
+  }
+  

@@ -1,12 +1,13 @@
-import React, { useState, useEffect } from 'react';
-import tokenomicsText from '../../assets/fonts/tokenomics.png';
-import roadmap from '../../assets/Roadmap.png';
-import roadmap1 from '../../assets/roadmap1.png';
-import roadmapText from '../../assets/fonts/roadmap.png';
-import roadImg1 from '../../assets/roadmap1.jpg';
-import roadImg2 from '../../assets/roadmap2.jpg';
-import roadImg3 from '../../assets/roadmap3.jpg';
-import './roadmap.css';
+import React, { useState, useEffect } from "react";
+import tokenomicsText from "../../assets/fonts/tokenomics.png";
+import roadmap from "../../assets/Roadmap.png";
+import roadmap1 from "../../assets/roadmap1.png";
+import roadmapText from "../../assets/fonts/roadmap.png";
+import roadImg1 from "../../assets/roadmap1.jpg";
+import roadImg2 from "../../assets/roadmap2.jpg";
+import roadImg3 from "../../assets/roadmap3.jpg";
+import bullet from "../../assets/bullets.png"; // Bullet image
+import "./roadmap.css";
 
 const Roadmap = () => {
   const [isTextVisible, setIsTextVisible] = useState(false);
@@ -15,8 +16,8 @@ const Roadmap = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const tokenomicsElement = document.querySelector('.tokenomics-text');
-      const roadmapTextElement = document.querySelector('.roadmap-text');
+      const tokenomicsElement = document.querySelector(".tokenomics-text");
+      const roadmapTextElement = document.querySelector(".roadmap-text");
 
       const tokenomicsRect = tokenomicsElement.getBoundingClientRect();
       const roadmapTextRect = roadmapTextElement.getBoundingClientRect();
@@ -25,15 +26,18 @@ const Roadmap = () => {
       setIsRoadmapTextVisible(roadmapTextRect.top < window.innerHeight * 0.99);
 
       // Check if the user has scrolled and reached 90% of the page
-      if (window.scrollY + window.innerHeight >= document.body.scrollHeight * 0.9) {
+      if (
+        window.scrollY + window.innerHeight >=
+        document.body.scrollHeight * 0.9
+      ) {
         setIsCardAnimationVisible(true); // Set isCardAnimationVisible to true
       }
     };
 
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
 
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -43,8 +47,11 @@ const Roadmap = () => {
       <img
         src={tokenomicsText}
         alt="Heading text"
-        className={`tokenomics-text absolute top-[2%] left-[15%] w-[31%] ${isTextVisible ? 'animate-bounce-in' : ''}`}
+        className={`tokenomics-text absolute top-[2%] left-[15%] w-[31%] ${
+          isTextVisible ? "animate-bounce-in" : ""
+        }`}
       />
+
       <div className="flex flex-col items-center absolute top-40 left-1/2 transform -translate-x-1/2 space-y-6">
         <div className="flex space-x-6">
           <div className="border-4 border-yellow-500 w-80 h-24 bg-transparent relative flex items-center justify-start">
@@ -74,22 +81,30 @@ const Roadmap = () => {
       <img
         src={roadmapText}
         alt="Heading text"
-        className={`roadmap-text absolute top-[49%] left-[14%] w-[25%] ${isRoadmapTextVisible ? 'animate-bounce-in' : ''}`}
+        className={`roadmap-text absolute top-[51%] left-[14%] w-[25%] ${
+          isRoadmapTextVisible ? "animate-bounce-in" : ""
+        }`}
+      />
+      <img
+        src={bullet}
+        alt="bullet image"
+        className="absolute top-[53.5%] left-[17.5%] w-auto h-auto animate-bullet-in"
+      />
+      <img
+        src={bullet}
+        alt="bullet image"
+        className="absolute top-[50%] left-[30%] w-8 h-auto animate-bullet-in"
       />
       <div className="flex items-center justify-center space-x-8 top-[60%] absolute left-0 right-0">
-        <div className={`w-[22%] roadmap-card ${isCardAnimationVisible ? 'animate-bounce-in' : ''}`}>
-          <img src={roadImg1} alt="Slider image 1" />
+        <div className={`w-[22%] roadmap-card ${isCardAnimationVisible ? 'flip' : ''} ${isCardAnimationVisible ? 'flip-again' : ''}`}>
+          <img src={roadImg1} alt="Roadmap image 1" />
         </div>
-        {isCardAnimationVisible && (
-          <>
-            <div className={`w-[22%] roadmap-card animate-delay-1`}>
-              <img src={roadImg2} alt="Slider image 2" />
-            </div>
-            <div className={`w-[22%] roadmap-card animate-delay-2`}>
-              <img src={roadImg3} alt="Slider image 3" />
-            </div>
-          </>
-        )}
+        <div className={`w-[22%] roadmap-card ${isCardAnimationVisible ? 'flip' : ''} ${isCardAnimationVisible ? 'flip-again' : ''}`}>
+          <img src={roadImg2} alt="Roadmap image 2" />
+        </div>
+        <div className={`w-[22%] roadmap-card ${isCardAnimationVisible ? 'flip' : ''} ${isCardAnimationVisible ? 'flip-again' : ''}`}>
+          <img src={roadImg3} alt="Roadmap image 3" />
+        </div>
       </div>
     </div>
   );

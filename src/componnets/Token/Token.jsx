@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import TokenHeading from '../../assets/fonts/token.png';
 import TokenCloud from '../../assets/token0.png';
 import TokenText from '../../assets/tokenText.png';
+import bullet from "../../assets/bullets.png"; // Bullet image
 
 import './token.css';
 
@@ -27,8 +28,15 @@ const Token = () => {
       <img
         src={TokenHeading}
         alt="Heading text"
-        className={`token-heading absolute top-[7%] w-[55%] centered-image ${isHeadingVisible ? 'animate-bounce-in' : ''}`}
+        className={`token-heading absolute top-[4%] w-[55%] centered-image ${isHeadingVisible ? 'animate-bounce-in' : ''}`}
       />
+      <img src={bullet} alt="bullet image" className="absolute top-[11%] left-[21%] w-auto h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[12%] left-[32%] w-6 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[5%] left-[44%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[13%] right-[31%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[4%] right-[23%] w-8 h-auto animate-bullet-in" />
+
+
       <img
         src={TokenCloud}
         alt="Heading text"

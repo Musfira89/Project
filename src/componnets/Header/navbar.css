@@ -1,0 +1,24 @@
+/* CSS file (e.g., styles.css) */
+
+/* Small devices (landscape phones) */
+@media only screen and (max-width: 576px) {
+    .Navbar {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+    .Navbar li {
+      margin-bottom: 1rem;
+    }
+  }
+  
+  /* Medium devices (tablets) */
+  @media only screen and (min-width: 576px) and (max-width: 768px) {
+    /* You can add styles specific to medium-sized devices if needed */
+  }
+  
+  /* Large devices (desktops) */
+  @media only screen and (min-width: 769px) {
+    /* You can add styles specific to large-sized devices if needed */
+  }
+  

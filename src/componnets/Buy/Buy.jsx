@@ -16,6 +16,7 @@ import assest7 from "../../assets/addional/c7.png";
 import assest8 from "../../assets/addional/c8.png";
 import assest9 from "../../assets/addional/c9.png";
 import assest10 from "../../assets/addional/c10.png";
+import bullet from "../../assets/bullets.png"; // Bullet image
 
 import "./buy.css";
 
@@ -63,6 +64,10 @@ const Buy = () => {
           isTextVisible ? "animate-bounce-in" : ""
         }`}
       />
+        <img src={bullet} alt="bullet image" className="absolute top-[6%] left-[7%] w-auto h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[5%] left-[20%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[5%] left-[34%] w-8 h-auto animate-bullet-in" />
+
       <p className="paragraph absolute top-[12%] left-[16%] w-[41%] text-white ">
         To buy $BRUH download phantom wallet, puchase $SOL from an exchange or bridge $SOL and card itn
         to your Phantom wallet then buy $BRUH on either Jupiter or FluxBeam.
@@ -92,6 +97,9 @@ const Buy = () => {
         alt="Heading text"
         className={"absolute top-[42%] centered-image w-[40%]"}
       />
+          <img src={bullet} alt="bullet image" className="absolute top-[43%] left-[29%] w-auto h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[48%] left-[44%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[43%] left-[62%] w-10 h-auto animate-bullet-in" />
       <p className="paragraph absolute top-[52%] centered-image w-[57%] text-white ">
         BRUH has a 2.5% transfer fee on all on-chain transfers. <br />
         <br />
@@ -107,6 +115,12 @@ const Buy = () => {
         alt="Heading text"
         className={"absolute top-[70%] centered-image w-[53%]"}
       />
+        <img src={bullet} alt="bullet image" className="absolute top-[73%] left-[22%] w-auto h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[71%] left-[32%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[74%] left-[48%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[70%] left-[62%] w-8 h-auto animate-bullet-in" />
+      <img src={bullet} alt="bullet image" className="absolute top-[74%] left-[76%] w-6 h-auto animate-bullet-in" />
+
   <p className="paragraph absolute top-[80%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 text-white text-lowercase text-center">
   The first 10 frens that our community will vote on and support are : <br />
   Static: JUP, WEN, BOK, FLUXB, All <br />
@@ -114,24 +128,25 @@ const Buy = () => {
 </p>
 
   
-      {isVisible && (
-        <>
-          <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 top-[86%] centered-image w-[6%] ">
-            <img src={asset1} alt="Asset 1" className="mx-12 animate-bounce-in" />
-            <img src={assest2} alt="Asset 2" className="mx-12 animate-bounce-in" />
-            <img src={assest3} alt="Asset 3" className="mx-12 animate-bounce-in" />
-            <img src={assest4} alt="Asset 4" className="mx-12 animate-bounce-in" />
-            <img src={assest5} alt="Asset 5" className="mx-12 animate-bounce-in" />
-          </div>
-          <div className="flex justify-center absolute top-[92%] centered-image w-[6%]">
-            <img src={assest6} alt="Asset 6" className="mx-12 animate-bounce-in" />
-            <img src={assest7} alt="Asset 2" className="mx-12 animate-bounce-in" />
-            <img src={assest8} alt="Asset 3" className="mx-12 animate-bounce-in" />
-            <img src={assest9} alt="Asset 4" className="mx-12 animate-bounce-in" />
-            <img src={assest10} alt="Asset 5" className="mx-12 animate-bounce-in" />
-          </div>
-        </>
-      )}
+{isVisible && (
+  <>
+    <div className="flex justify-center absolute left-1/2 transform -translate-x-1/2 top-[86%] centered-image w-[6%] ">
+      <img src={asset1} alt="Asset 1" className="mx-12 animate-sequence-row1" />
+      <img src={assest2} alt="Asset 2" className="mx-12 animate-sequence-row1" />
+      <img src={assest3} alt="Asset 3" className="mx-12 animate-sequence-row1" />
+      <img src={assest4} alt="Asset 4" className="mx-12 animate-sequence-row1" />
+      <img src={assest5} alt="Asset 5" className="mx-12 animate-sequence-row1" />
+    </div>
+    <div className="flex justify-center absolute top-[92%] centered-image w-[6%]">
+      <img src={assest6} alt="Asset 6" className="mx-12 animate-sequence-row2" />
+      <img src={assest7} alt="Asset 2" className="mx-12 animate-sequence-row2" />
+      <img src={assest8} alt="Asset 3" className="mx-12 animate-sequence-row2" />
+      <img src={assest9} alt="Asset 4" className="mx-12 animate-sequence-row2" />
+      <img src={assest10} alt="Asset 5" className="mx-12 animate-sequence-row2" />
+    </div>
+  </>
+)}
+
     </div>
   );
 };
